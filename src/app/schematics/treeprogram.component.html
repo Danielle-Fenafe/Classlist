@@ -1,0 +1,10 @@
+<ul class="tree">
+    <li *ngFor="let program of programs">
+        {{program.name}}
+        <ul *ngIf="program.students & program.students.Action" class="sub-tree">
+            <li *ngFor="let student of program.students">
+                {{student.name}}
+            </li>
+        </ul>
+    </li>
+</ul>

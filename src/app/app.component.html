@@ -1,0 +1,22 @@
+<div>
+    <header>
+        CLASS LIST APP
+    </header>
+    <section>
+         <div class="content-area">
+         <div>
+             <ul>
+                @for(item of menu; track item.path) {
+                    <li (click)="handleNav(item.path)">{{item.name}}</li>
+                }
+             </ul>
+         </div>
+         <div>
+            <router-outlet></router-outlet>
+         </div>
+         </div>    
+    </section>
+    <footer>
+        Copyright LTD &copy; 2024 Class list app. All right reserved.
+    </footer>
+</div>
